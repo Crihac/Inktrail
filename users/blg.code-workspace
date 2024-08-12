@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../blg"
+		},
+		{
+			"path": "../comm"
+		},
+		{
+			"path": "../media"
+		},
+		{
+			"path": "."
+		}
+	]
+}

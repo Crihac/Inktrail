@@ -1,0 +1,14 @@
+{% extends "comm/base.html" %}
+{% block content %}
+        <img src="{{ object.author.profile.image.url}}" alt="">
+        <a href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+        <p> {{ object.date_posted | date:"F d,Y" }}</p>
+
+        {% if object.author == user %}
+              <a href="{% url 'post-update' object.id %}">Update </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="{% url 'post-delete' object.id %}">Delete </a>
+        {% endif %}
+        <h1>{{ object.title }}</h1>
+        <p>{{ object.content }}</p>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "comm/base.html" %}
+{% block content %}
+
+    <img src="{{ user.profile.image.url }}" alt="">
+    <h2>{{ user.username }}</h2>
+    <p>{{user.email}}</p>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <legend>Profile Info</legend>
+        {{ u_form.as_p}}
+        {{ p_form.as_p}}   
+        <button type="submit">Update</button>
+    </form>
+{% endblock content %}
